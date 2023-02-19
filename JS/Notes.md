@@ -8,21 +8,21 @@
 
 ## Example:
 
-var car = { 
-    registrationNumber: "GA12345",
-    brand: "Toyota"
-}
+    var car = { 
+        registrationNumber: "GA12345",
+        brand: "Toyota"
+    }
 
-function displayDetails(ownerName) {
-    console.log(ownerName + ", this is your car: " + this.registrationNumber + " " + this.brand);
-}
+    function displayDetails(ownerName) {
+        console.log(ownerName + ", this is your car: " + this.registrationNumber + " " + this.brand);
+    }
 
-displayDetails.apply(car, ["Ashish"]);
-displayDetails.call(car, "Tanuj"); 
-// var bindFn= displayDetails.bind(car)
-// bindFn('Harshit')
+    displayDetails.apply(car, ["Ashish"]);
+    displayDetails.call(car, "Tanuj"); 
+    // var bindFn= displayDetails.bind(car)
+    // bindFn('Harshit')
 
-displayDetails.bind(car)('Harshit'); 
+    displayDetails.bind(car)('Harshit'); 
 
 # What is callback function in JavaScript?
 A callback is a function passed as an argument to another function. This technique allows a function to call another function. A callback function can run after another function has finished.
