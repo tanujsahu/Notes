@@ -28,19 +28,22 @@
 A callback is a function passed as an argument to another function. This technique allows a function to call another function. A callback function can run after another function has finished.
 
 ## Example:
-// Callback Function Example
-function greet(name, myFunction) {
-    console.log('Hello world');
-    myFunction(name);
-}
+    // Callback Function Example
 
-// callback function
-function sayName(name) {
-    console.log('Hello' + ' ' + name);
-}
+    function greet(name, myFunction) {
+        console.log('Hello world');
+        myFunction(name);
+    }
 
-// calling the function after 2 seconds
-setTimeout(greet, 2000, 'John', sayName);
+    // callback function
 
-greet('Tanuj',sayName)
+    function sayName(name) {
+        console.log('Hello' + ' ' + name);
+    }
+
+    // calling the function after 2 seconds
+    
+    setTimeout(greet, 2000, 'John', sayName);
+
+    greet('Tanuj',sayName)
 
